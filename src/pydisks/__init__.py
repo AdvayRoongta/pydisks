@@ -2,11 +2,11 @@
 
 A small, explicit library for the disc, washer, and shell methods plus
 surface area of revolution. The axis of rotation is always given
-explicitly as a line, e.g. ``("y", 0)`` for the x-axis or ``("x", 2)``
-for the vertical line x = 2. The correct variable of integration is
-derived from the axis and the method, and mismatches are reported as
-errors rather than silently "fixed" (the library never tries to invert
-your function for you).
+explicitly as a line, e.g. "x" for the x-axis or "x=2" for the vertical
+line x = 2. The correct variable of integration is derived from the axis
+and the method, and mismatches are reported as errors rather than
+silently "fixed" (the library never tries to invert your function for
+you).
 
 Conventions
 -----------
@@ -29,8 +29,28 @@ The variable you must express your curve(s) in depends on the method:
 
 import sympy as sp
 
+__version__ = "0.1.0"
+
 x = sp.Symbol("x")
 y = sp.Symbol("y")
+
+__all__ = [
+    "x",
+    "y",
+    "disc",
+    "washer",
+    "shell",
+    "surface_area",
+    "revolve",
+    "RevolutionError",
+    "AxisError",
+    "VariableMismatchError",
+    "BoundsError",
+    "SelfIntersectingSolidError",
+    "CurveCrossingError",
+    "DomainError",
+    "UnevaluatedIntegralError",
+]
 
 
 # --------------------------------------------------------------------------
@@ -378,12 +398,3 @@ def revolve(f, a, b, axis="x", inner=None):
     else:
         method, volume = "washer", washer(f, inner, a, b, axis=axis)
     return {"method": method, "volume": volume, "approx": sp.N(volume)}
-
-
-if __name__ == "__main__":
-    # Sphere of radius 2: revolve y = sqrt(4 - x^2) about the x-axis -> 32*pi/3.
-    print("sphere volume :", disc(sp.sqrt(4 - x ** 2), -2, 2))
-    # Washer: region between y = x and y = x^2 on [0, 1], about the x-axis.
-    print("washer volume :", washer(x, x ** 2, 0, 1))
-    # Shell: revolve y = x^2 on [0, 2] about the y-axis -> 8*pi.
-    print("shell volume  :", shell(x ** 2, 0, 2))

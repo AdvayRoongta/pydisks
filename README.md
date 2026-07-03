@@ -10,15 +10,13 @@ returning a wrong number.
 ## Install
 
 ```bash
-pip install sympy
+pip install pydisks
 ```
-
-Then drop `main.py` next to your script, or work in the same folder.
 
 ## Quick start
 
 ```python
-from main import disc, washer, shell, surface_area, revolve, x, y
+from pydisks import disc, washer, shell, surface_area, revolve, x, y
 import sympy as sp
 
 # Volume of a sphere of radius 2: revolve y = sqrt(4 - x^2) about the x-axis

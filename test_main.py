@@ -4,7 +4,7 @@
 import sympy as sp
 import pytest
 
-from main import (
+from pydisks import (
     x, y, disc, washer, shell, surface_area, revolve,
     AxisError, VariableMismatchError, BoundsError,
     SelfIntersectingSolidError, CurveCrossingError, DomainError,
