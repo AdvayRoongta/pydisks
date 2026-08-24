@@ -1,10 +1,8 @@
 # pydisks
 
 Compute **volumes and surface areas of solids of revolution** — the disc,
-washer, and shell methods plus surface area of revolution — symbolically. Built for checking calculus homework:
-you get an exact answer, and mistakes (wrong variable, self-intersecting
-solids, curves in the wrong order) raise clear errors instead of silently
-returning a wrong number.
+washer, and shell methods plus surface area of revolution — symbolically. You get an exact answer, and errors (wrong variable, self-intersecting
+solids, curves in the wrong order) raise clear exceptions.
 
 ## Install
 
