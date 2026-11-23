@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "pydisks"
 dynamic = ["version"]
-description = "Volumes and surface areas of solids of revolution (disc, washer, shell) via SymPy."
+description = "Volumes and surface areas of solids of revolution (disc, washer, shell) from formulas or measured data, with plots and animations."
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
@@ -17,12 +17,16 @@ keywords = ["calculus", "integration", "solids of revolution", "volume", "sympy"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Manufacturing",
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
     "Topic :: Scientific/Engineering :: Mathematics",
 ]
 dependencies = [
     "sympy>=1.8",
+    "matplotlib>=3.6",
+    "numpy",
 ]
 
 [project.urls]

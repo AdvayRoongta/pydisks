@@ -11,3 +11,7 @@ CLAUDE.md
 dist/
 build/
 *.egg-info/
+
+# Demo output
+videos/
+plots/
