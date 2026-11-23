@@ -55,7 +55,7 @@ from .profile import (
     quadrature,
 )
 
-__version__ = "0.1.0"
+__version__ = "2.0.0"
 
 x = sp.Symbol("x")
 y = sp.Symbol("y")

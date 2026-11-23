@@ -15,7 +15,7 @@ authors = [
 ]
 keywords = ["calculus", "integration", "solids of revolution", "volume", "sympy"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Education",
     "Intended Audience :: Science/Research",
     "Intended Audience :: Manufacturing",
@@ -36,3 +36,8 @@ Issues = "https://github.com/AdvayRoongta/pydisks/issues"
 
 [tool.hatch.version]
 path = "src/pydisks/__init__.py"
+
+# Keep the source package small: the README GIFs and demo scripts are
+# repository-only (the README links to the GIFs on GitHub).
+[tool.hatch.build.targets.sdist]
+include = ["src", "test_main.py", "README.md", "LICENSE", "pyproject.toml"]
