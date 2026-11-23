@@ -1,4 +1,3 @@
-# claude
 """Tests for pydisks — checks textbook answers and the error surface."""
 
 import matplotlib
