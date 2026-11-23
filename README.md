@@ -1,13 +1,10 @@
 # pydisks
 
 Compute **volumes and surface areas of solids of revolution** — the disc,
-washer, and shell methods plus surface area of revolution — symbolically,
-using [SymPy](https://www.sympy.org/), or numerically from **measured
-data**. Use it to check calculus homework (exact answers like `32*pi/3`) or
-to size real objects such as tanks, turned parts and vases from sample
-points. Either way, mistakes (wrong variable, self-intersecting solids,
-curves in the wrong order) raise clear errors instead of silently returning
-a wrong number.
+washer, and shell methods plus surface area of revolution — symbolically, or
+numerically from **measured data**. You get an exact answer (a float for
+measured shapes), and errors (wrong variable, self-intersecting solids,
+curves in the wrong order) raise clear exceptions.
 
 <p align="center">
   <img src="docs/img/washer_y_axis.gif"
